@@ -467,6 +467,200 @@
             border-radius: 8px;
             border: 1px solid #e9ecef;
         }
+
+        .image-upload-section {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px dashed #dee2e6;
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .upload-instructions h4 {
+            color: #495057;
+            margin-bottom: 15px;
+        }
+
+        .upload-instructions p {
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .upload-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .filename-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .filename-tag {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .fallback-images {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .fallback-images h4 {
+            color: #495057;
+            margin-bottom: 15px;
+        }
+
+        .dynamic-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dynamic-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .embedded-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            border: 3px solid #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            object-fit: cover;
+        }
+
+        .embedded-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .image-fallback {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            border: 3px solid #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-fallback:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .tissue-pattern {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .pattern-1 {
+            background: 
+                radial-gradient(circle at 20% 30%, #8b4593 2px, transparent 2px),
+                radial-gradient(circle at 60% 20%, #ba55d3 1px, transparent 1px),
+                radial-gradient(circle at 80% 70%, #8a2be2 1.5px, transparent 1.5px),
+                radial-gradient(circle at 40% 80%, #9370db 1px, transparent 1px),
+                radial-gradient(circle at 15% 60%, #dda0dd 2px, transparent 2px),
+                linear-gradient(45deg, rgba(221, 160, 221, 0.7), rgba(238, 130, 238, 0.5));
+            background-size: 15px 15px, 20px 20px, 25px 25px, 18px 18px, 22px 22px, 100% 100%;
+        }
+
+        .pattern-2 {
+            background: 
+                radial-gradient(circle at 30% 40%, #9400d3 2px, transparent 2px),
+                radial-gradient(circle at 70% 60%, #c71585 1px, transparent 1px),
+                radial-gradient(circle at 50% 80%, #9370db 1.5px, transparent 1.5px),
+                radial-gradient(circle at 25% 15%, #da70d6 1px, transparent 1px),
+                linear-gradient(45deg, rgba(230, 230, 250, 0.8), rgba(221, 160, 221, 0.6));
+            background-size: 18px 18px, 25px 25px, 20px 20px, 15px 15px, 100% 100%;
+        }
+
+        .pattern-3 {
+            background: 
+                radial-gradient(circle at 25% 25%, #483d8b 2px, transparent 2px),
+                radial-gradient(circle at 75% 35%, #7b68ee 1px, transparent 1px),
+                radial-gradient(circle at 45% 75%, #9370db 1.5px, transparent 1.5px),
+                radial-gradient(circle at 60% 10%, #dda0dd 1px, transparent 1px),
+                radial-gradient(circle at 10% 90%, #ba55d3 2px, transparent 2px),
+                linear-gradient(135deg, rgba(221, 160, 221, 0.5), rgba(176, 196, 222, 0.7));
+            background-size: 20px 20px, 16px 16px, 24px 24px, 18px 18px, 22px 22px, 100% 100%;
+        }
+
+        .pattern-4 {
+            background: 
+                radial-gradient(circle at 40% 30%, #6a5acd 2px, transparent 2px),
+                radial-gradient(circle at 65% 50%, #8a2be2 1px, transparent 1px),
+                radial-gradient(circle at 30% 70%, #483d8b 1.5px, transparent 1.5px),
+                radial-gradient(circle at 80% 20%, #9370db 1px, transparent 1px),
+                linear-gradient(45deg, rgba(230, 230, 250, 0.8), rgba(221, 160, 221, 0.5));
+            background-size: 22px 22px, 17px 17px, 19px 19px, 25px 25px, 100% 100%;
+        }
+
+        .pattern-5 {
+            background: 
+                radial-gradient(circle at 35% 40%, #9400d3 2px, transparent 2px),
+                radial-gradient(circle at 70% 25%, #ba55d3 1px, transparent 1px),
+                radial-gradient(circle at 50% 75%, #8a2be2 1.5px, transparent 1.5px),
+                radial-gradient(circle at 20% 80%, #dda0dd 1px, transparent 1px),
+                radial-gradient(circle at 85% 60%, #da70d6 2px, transparent 2px),
+                linear-gradient(135deg, rgba(221, 160, 221, 0.6), rgba(218, 112, 214, 0.5));
+            background-size: 16px 16px, 23px 23px, 21px 21px, 19px 19px, 24px 24px, 100% 100%;
+        }
+
+        .image-embed-instructions {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
@@ -525,25 +719,45 @@
                 <p style="margin-bottom: 20px;"><strong>Colon Cancer Histopathological Images (768×768 pixels)</strong></p>
                 <div class="sample-images-grid">
                     <div class="sample-image-container">
-                        <div class="sample-image sample-image-1"></div>
-                        <div class="sample-label">colon673.png</div>
+                        <img src="PATH_TO_YOUR_IMAGE/colonca637.png" alt="colonca637" class="embedded-image" onclick="expandImageSrc(this.src, 'colonca637.png')" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="image-fallback" style="display: none;">
+                            <div class="tissue-pattern pattern-1"></div>
+                        </div>
+                        <div class="sample-label">colonca637.png</div>
                     </div>
                     <div class="sample-image-container">
-                        <div class="sample-image sample-image-2"></div>
+                        <img src="PATH_TO_YOUR_IMAGE/colonca3400.png" alt="colonca3400" class="embedded-image" onclick="expandImageSrc(this.src, 'colonca3400.png')" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="image-fallback" style="display: none;">
+                            <div class="tissue-pattern pattern-2"></div>
+                        </div>
                         <div class="sample-label">colonca3400.png</div>
                     </div>
                     <div class="sample-image-container">
-                        <div class="sample-image sample-image-3"></div>
+                        <img src="PATH_TO_YOUR_IMAGE/colonca783.png" alt="colonca783" class="embedded-image" onclick="expandImageSrc(this.src, 'colonca783.png')" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="image-fallback" style="display: none;">
+                            <div class="tissue-pattern pattern-3"></div>
+                        </div>
                         <div class="sample-label">colonca783.png</div>
                     </div>
                     <div class="sample-image-container">
-                        <div class="sample-image sample-image-4"></div>
+                        <img src="PATH_TO_YOUR_IMAGE/colonca3927.jpeg" alt="colonca3927" class="embedded-image" onclick="expandImageSrc(this.src, 'colonca3927.jpeg')" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="image-fallback" style="display: none;">
+                            <div class="tissue-pattern pattern-4"></div>
+                        </div>
                         <div class="sample-label">colonca3927.jpeg</div>
                     </div>
                     <div class="sample-image-container">
-                        <div class="sample-image sample-image-5"></div>
+                        <img src="PATH_TO_YOUR_IMAGE/colonca4109.png" alt="colonca4109" class="embedded-image" onclick="expandImageSrc(this.src, 'colonca4109.png')" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="image-fallback" style="display: none;">
+                            <div class="tissue-pattern pattern-5"></div>
+                        </div>
                         <div class="sample-label">colonca4109.png</div>
                     </div>
+                </div>
+                <div class="image-embed-instructions">
+                    <p style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 20px 0;">
+                        <strong>📁 To add your images:</strong> Replace "PATH_TO_YOUR_IMAGE/" with the actual path to your image files in the HTML above.
+                    </p>
                 </div>
                 <p style="margin-top: 15px; font-style: italic; color: #7f8c8d;">
                     These samples represent the complexity and variety in histopathological tissue analysis that the CNN model learns to classify.
@@ -901,6 +1115,168 @@ model = Sequential([
                 this.style.transform = 'scale(1) rotate(0deg)';
             });
         });
+
+
+
+        // Function to expand actual images in a modal-like view
+        function expandImageSrc(imageSrc, filename) {
+            // Create modal overlay
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 1000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            `;
+            
+            // Create expanded image
+            const expandedImg = document.createElement('img');
+            expandedImg.src = imageSrc;
+            expandedImg.style.cssText = `
+                max-width: 90%;
+                max-height: 90%;
+                border-radius: 15px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                object-fit: contain;
+            `;
+            
+            // Create filename label
+            const filenameLabel = document.createElement('div');
+            filenameLabel.textContent = filename;
+            filenameLabel.style.cssText = `
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 255, 255, 0.95);
+                padding: 12px 24px;
+                border-radius: 25px;
+                font-weight: 600;
+                color: #333;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            `;
+            
+            // Create close instruction
+            const closeInstruction = document.createElement('div');
+            closeInstruction.textContent = 'Click anywhere to close';
+            closeInstruction.style.cssText = `
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 255, 255, 0.9);
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                color: #666;
+            `;
+            
+            modal.appendChild(expandedImg);
+            modal.appendChild(filenameLabel);
+            modal.appendChild(closeInstruction);
+            document.body.appendChild(modal);
+            
+            // Close modal on click
+            modal.onclick = function() {
+                document.body.removeChild(modal);
+            };
+        }
+
+        // Function to expand images in a modal-like view
+        function expandImage(imageId, filename) {
+            const sourceElement = document.getElementById(imageId);
+            
+            // Create modal overlay
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 1000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            `;
+            
+            // Create expanded image container
+            const expandedContainer = document.createElement('div');
+            expandedContainer.style.cssText = `
+                width: 80%;
+                max-width: 600px;
+                height: 80%;
+                max-height: 600px;
+                border-radius: 15px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                overflow: hidden;
+                position: relative;
+            `;
+            
+            // Copy the pattern from the original image
+            const patternDiv = sourceElement.querySelector('.tissue-pattern');
+            const expandedPattern = patternDiv.cloneNode(true);
+            expandedPattern.style.cssText = `
+                width: 100%;
+                height: 100%;
+                transform: scale(1);
+                border-radius: 15px;
+            `;
+            
+            expandedContainer.appendChild(expandedPattern);
+            
+            // Create filename label
+            const filenameLabel = document.createElement('div');
+            filenameLabel.textContent = filename;
+            filenameLabel.style.cssText = `
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 255, 255, 0.95);
+                padding: 12px 24px;
+                border-radius: 25px;
+                font-weight: 600;
+                color: #333;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            `;
+            
+            // Create close instruction
+            const closeInstruction = document.createElement('div');
+            closeInstruction.textContent = 'Click anywhere to close';
+            closeInstruction.style.cssText = `
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 255, 255, 0.9);
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                color: #666;
+            `;
+            
+            modal.appendChild(expandedContainer);
+            modal.appendChild(filenameLabel);
+            modal.appendChild(closeInstruction);
+            document.body.appendChild(modal);
+            
+            // Close modal on click
+            modal.onclick = function() {
+                document.body.removeChild(modal);
+            };
+        }
+
+
     </script>
 </body>
 </html>
