@@ -329,14 +329,25 @@
         }
 
         .sample-images-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             margin: 20px 0;
         }
 
         .sample-image-container {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .sample-image-container:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
         }
 
         .sample-image {
@@ -719,7 +730,7 @@
                 <p style="margin-bottom: 20px;"><strong>Colon Cancer Histopathological Images (768×768 pixels)</strong></p>
                 <div class="sample-images-grid">
                     <div class="sample-image-container">
-                        <img src="" alt="colonca673.png" class="embedded-image" onclick="expandImageSrc(this.src, 'colonca673.png')" onerror="this.style.display='none';">
+                        <img src="" alt="colonca673" class="embedded-image" onclick="expandImageSrc(this.src, 'colonca673.png')" onerror="this.style.display='none';">
                         <div class="sample-label">colonca637.png</div>
                     </div>
                     <div class="sample-image-container">
