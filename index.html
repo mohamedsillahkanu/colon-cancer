@@ -29,7 +29,7 @@
             text-align: center;
             margin-bottom: 40px;
             background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
+            padding: 30px 20px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
@@ -37,15 +37,17 @@
 
         .header h1 {
             color: #2c3e50;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin-bottom: 10px;
             font-weight: 700;
+            line-height: 1.2;
         }
 
         .header .subtitle {
             color: #7f8c8d;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             margin-bottom: 15px;
+            line-height: 1.4;
         }
 
         .author-info {
@@ -55,26 +57,27 @@
             border-radius: 25px;
             display: inline-block;
             font-weight: 500;
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             margin-bottom: 30px;
         }
 
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
             margin-bottom: 30px;
         }
 
         .card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
-            padding: 25px;
+            padding: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
@@ -100,13 +103,14 @@
         .card h3 {
             color: #2c3e50;
             margin-bottom: 15px;
-            font-size: 1.4rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             font-weight: 600;
+            line-height: 1.3;
         }
 
         .metric-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 15px;
             margin: 20px 0;
         }
@@ -114,10 +118,14 @@
         .metric-card {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
             text-align: center;
             transition: all 0.3s ease;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .metric-card:hover {
@@ -125,14 +133,15 @@
         }
 
         .metric-value {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
             font-weight: 700;
             margin-bottom: 5px;
         }
 
         .metric-label {
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
             opacity: 0.9;
+            line-height: 1.2;
         }
 
         .progress-bar {
@@ -153,29 +162,31 @@
             justify-content: center;
             color: white;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: clamp(0.7rem, 1.8vw, 0.8rem);
         }
 
         .class-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
         }
 
         .class-item {
             background: linear-gradient(135deg, #f093fb, #f5576c);
             color: white;
-            padding: 15px;
+            padding: 12px;
             border-radius: 12px;
             text-align: center;
             font-weight: 500;
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+            line-height: 1.3;
         }
 
         .methodology-step {
             background: #f8f9fa;
             border-left: 4px solid #3498db;
-            padding: 15px;
-            margin: 10px 0;
+            padding: 12px;
+            margin: 8px 0;
             border-radius: 8px;
             transition: all 0.3s ease;
         }
@@ -188,20 +199,21 @@
         .step-number {
             background: #3498db;
             color: white;
-            width: 25px;
-            height: 25px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: 600;
-            margin-right: 10px;
+            margin-right: 8px;
+            flex-shrink: 0;
         }
 
         .chart-container {
             position: relative;
-            height: 300px;
+            height: clamp(250px, 40vw, 350px);
             margin: 20px 0;
         }
 
@@ -211,19 +223,22 @@
 
         .tab-buttons {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             margin-bottom: 20px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .tab-button {
-            padding: 10px 20px;
+            padding: 8px 16px;
             background: #ecf0f1;
             border: none;
             border-radius: 25px;
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: 500;
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+            white-space: nowrap;
         }
 
         .tab-button.active {
@@ -242,12 +257,13 @@
         .architecture-layer {
             background: linear-gradient(90deg, #667eea, #764ba2);
             color: white;
-            padding: 10px 15px;
-            margin: 5px 0;
+            padding: 8px 12px;
+            margin: 4px 0;
             border-radius: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
         }
 
         .layer-type {
@@ -255,42 +271,77 @@
         }
 
         .layer-params {
-            font-size: 0.9rem;
+            font-size: clamp(0.7rem, 1.6vw, 0.8rem);
             opacity: 0.9;
         }
 
-        @media (max-width: 768px) {
-            .dashboard {
-                padding: 10px;
-            }
+        .sample-images-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
 
-            .header h1 {
-                font-size: 1.8rem;
-            }
+        .sample-image-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
 
-            .grid {
-                grid-template-columns: 1fr;
-            }
+        .sample-image-container:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
 
-            .metric-grid {
-                grid-template-columns: 1fr;
-            }
+        .embedded-image {
+            width: clamp(80px, 15vw, 120px);
+            height: clamp(80px, 15vw, 120px);
+            border-radius: 12px;
+            border: 3px solid #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .embedded-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .sample-label {
+            font-size: clamp(0.7rem, 1.6vw, 0.8rem);
+            color: #555;
+            font-weight: 500;
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            word-break: break-word;
         }
 
         .epoch-details {
             background: #f8f9fa;
             border-radius: 10px;
-            padding: 15px;
+            padding: 12px;
             margin: 10px 0;
+            overflow-x: auto;
         }
 
         .epoch-row {
             display: grid;
             grid-template-columns: auto 1fr 1fr 1fr 1fr;
-            gap: 15px;
-            padding: 8px 0;
+            gap: 8px;
+            padding: 6px 0;
             align-items: center;
             border-bottom: 1px solid #dee2e6;
+            font-size: clamp(0.7rem, 1.6vw, 0.8rem);
+            min-width: 400px;
         }
 
         .epoch-row:last-child {
@@ -300,20 +351,22 @@
         .epoch-header {
             font-weight: 600;
             background: #e9ecef;
-            padding: 10px 0;
-            margin: 0 -15px 10px -15px;
+            padding: 8px 0;
+            margin: 0 -12px 8px -12px;
             text-align: center;
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
         }
 
         .code-preview {
             background: #2d3748;
             color: #e2e8f0;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
+            font-size: clamp(0.7rem, 1.6vw, 0.8rem);
             overflow-x: auto;
             margin: 15px 0;
+            line-height: 1.4;
         }
 
         .code-preview .keyword {
@@ -328,349 +381,132 @@
             color: #feca57;
         }
 
-        .sample-images-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin: 20px 0;
+        /* Mobile-specific optimizations */
+        @media (max-width: 768px) {
+            .dashboard {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .grid, .grid-3 {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .metric-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .class-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .tab-buttons {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 5px;
+            }
+
+            .tab-button {
+                flex-shrink: 0;
+                padding: 6px 12px;
+            }
+
+            .sample-image-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .architecture-layer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                padding: 10px 12px;
+            }
+
+            .methodology-step {
+                padding: 10px;
+            }
         }
 
-        .sample-image-container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            transition: all 0.3s ease;
+        /* Desktop optimizations */
+        @media (min-width: 1200px) {
+            .dashboard {
+                padding: 30px;
+            }
+
+            .header {
+                padding: 40px;
+            }
+
+            .card {
+                padding: 30px;
+            }
+
+            .sample-image-container {
+                flex-direction: row;
+            }
         }
 
-        .sample-image-container:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
+        /* Tablet optimizations */
+        @media (min-width: 769px) and (max-width: 1199px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
         }
 
-        .sample-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 12px;
-            border: 3px solid #fff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            margin: 0 auto 8px auto;
-            transition: all 0.3s ease;
-            cursor: pointer;
+        /* Landscape phone optimizations */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .header h1 {
+                font-size: 1.6rem;
+            }
+
+            .chart-container {
+                height: 200px;
+            }
         }
 
-        .sample-image:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .card {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            }
         }
 
-        .sample-image-1 {
-            background: linear-gradient(45deg, #e8c5e8, #d8a8d8);
-            position: relative;
-        }
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
 
-        .sample-image-1::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(139, 69, 139, 0.4) 2px, transparent 2px),
-                radial-gradient(circle at 60% 20%, rgba(186, 85, 211, 0.3) 1px, transparent 1px),
-                radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.3) 1.5px, transparent 1.5px),
-                linear-gradient(135deg, rgba(221, 160, 221, 0.5), rgba(238, 130, 238, 0.5));
-            border-radius: 9px;
-        }
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
 
-        .sample-image-2 {
-            background: linear-gradient(45deg, #f0c8f0, #e8b8e8);
-            position: relative;
-        }
+            .tab-buttons {
+                display: none;
+            }
 
-        .sample-image-2::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 30% 40%, rgba(148, 0, 211, 0.4) 2px, transparent 2px),
-                radial-gradient(circle at 70% 60%, rgba(199, 21, 133, 0.3) 1px, transparent 1px),
-                radial-gradient(circle at 50% 80%, rgba(147, 112, 219, 0.3) 1.5px, transparent 1.5px),
-                linear-gradient(45deg, rgba(230, 230, 250, 0.6), rgba(221, 160, 221, 0.6));
-            border-radius: 9px;
-        }
-
-        .sample-image-3 {
-            background: linear-gradient(45deg, #e0b8e0, #d8a8d8);
-            position: relative;
-        }
-
-        .sample-image-3::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 25% 25%, rgba(72, 61, 139, 0.4) 2px, transparent 2px),
-                radial-gradient(circle at 75% 35%, rgba(123, 104, 238, 0.3) 1px, transparent 1px),
-                radial-gradient(circle at 45% 75%, rgba(147, 112, 219, 0.3) 1.5px, transparent 1.5px),
-                linear-gradient(135deg, rgba(221, 160, 221, 0.5), rgba(176, 196, 222, 0.5));
-            border-radius: 9px;
-        }
-
-        .sample-image-4 {
-            background: linear-gradient(45deg, #d8b8d8, #c8a8c8);
-            position: relative;
-        }
-
-        .sample-image-4::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 40% 30%, rgba(106, 90, 205, 0.4) 2px, transparent 2px),
-                radial-gradient(circle at 65% 50%, rgba(138, 43, 226, 0.3) 1px, transparent 1px),
-                radial-gradient(circle at 30% 70%, rgba(72, 61, 139, 0.3) 1.5px, transparent 1.5px),
-                linear-gradient(45deg, rgba(230, 230, 250, 0.6), rgba(221, 160, 221, 0.5));
-            border-radius: 9px;
-        }
-
-        .sample-image-5 {
-            background: linear-gradient(45deg, #e8b8e8, #d0a8d0);
-            position: relative;
-        }
-
-        .sample-image-5::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 35% 40%, rgba(148, 0, 211, 0.4) 2px, transparent 2px),
-                radial-gradient(circle at 70% 25%, rgba(186, 85, 211, 0.3) 1px, transparent 1px),
-                radial-gradient(circle at 50% 75%, rgba(138, 43, 226, 0.3) 1.5px, transparent 1.5px),
-                linear-gradient(135deg, rgba(221, 160, 221, 0.5), rgba(218, 112, 214, 0.5));
-            border-radius: 9px;
-        }
-
-        .sample-label {
-            font-size: 0.8rem;
-            color: #555;
-            font-weight: 500;
-            background: #f8f9fa;
-            padding: 4px 8px;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
-        }
-
-        .image-upload-section {
-            text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            border-radius: 15px;
-            margin: 20px 0;
-            border: 2px dashed #dee2e6;
-        }
-
-        .upload-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .upload-instructions h4 {
-            color: #495057;
-            margin-bottom: 15px;
-        }
-
-        .upload-instructions p {
-            color: #6c757d;
-            margin-bottom: 10px;
-        }
-
-        .upload-btn {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .upload-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .filename-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin: 15px 0;
-        }
-
-        .filename-tag {
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .fallback-images {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .fallback-images h4 {
-            color: #495057;
-            margin-bottom: 15px;
-        }
-
-        .dynamic-image {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 3px solid #fff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .dynamic-image:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        .embedded-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 12px;
-            border: 3px solid #fff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            object-fit: cover;
-        }
-
-        .embedded-image:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        .image-fallback {
-            width: 120px;
-            height: 120px;
-            border-radius: 12px;
-            border: 3px solid #fff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .image-fallback:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        .image-placeholder {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-        }
-
-        .tissue-pattern {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .pattern-1 {
-            background: 
-                radial-gradient(circle at 20% 30%, #8b4593 2px, transparent 2px),
-                radial-gradient(circle at 60% 20%, #ba55d3 1px, transparent 1px),
-                radial-gradient(circle at 80% 70%, #8a2be2 1.5px, transparent 1.5px),
-                radial-gradient(circle at 40% 80%, #9370db 1px, transparent 1px),
-                radial-gradient(circle at 15% 60%, #dda0dd 2px, transparent 2px),
-                linear-gradient(45deg, rgba(221, 160, 221, 0.7), rgba(238, 130, 238, 0.5));
-            background-size: 15px 15px, 20px 20px, 25px 25px, 18px 18px, 22px 22px, 100% 100%;
-        }
-
-        .pattern-2 {
-            background: 
-                radial-gradient(circle at 30% 40%, #9400d3 2px, transparent 2px),
-                radial-gradient(circle at 70% 60%, #c71585 1px, transparent 1px),
-                radial-gradient(circle at 50% 80%, #9370db 1.5px, transparent 1.5px),
-                radial-gradient(circle at 25% 15%, #da70d6 1px, transparent 1px),
-                linear-gradient(45deg, rgba(230, 230, 250, 0.8), rgba(221, 160, 221, 0.6));
-            background-size: 18px 18px, 25px 25px, 20px 20px, 15px 15px, 100% 100%;
-        }
-
-        .pattern-3 {
-            background: 
-                radial-gradient(circle at 25% 25%, #483d8b 2px, transparent 2px),
-                radial-gradient(circle at 75% 35%, #7b68ee 1px, transparent 1px),
-                radial-gradient(circle at 45% 75%, #9370db 1.5px, transparent 1.5px),
-                radial-gradient(circle at 60% 10%, #dda0dd 1px, transparent 1px),
-                radial-gradient(circle at 10% 90%, #ba55d3 2px, transparent 2px),
-                linear-gradient(135deg, rgba(221, 160, 221, 0.5), rgba(176, 196, 222, 0.7));
-            background-size: 20px 20px, 16px 16px, 24px 24px, 18px 18px, 22px 22px, 100% 100%;
-        }
-
-        .pattern-4 {
-            background: 
-                radial-gradient(circle at 40% 30%, #6a5acd 2px, transparent 2px),
-                radial-gradient(circle at 65% 50%, #8a2be2 1px, transparent 1px),
-                radial-gradient(circle at 30% 70%, #483d8b 1.5px, transparent 1.5px),
-                radial-gradient(circle at 80% 20%, #9370db 1px, transparent 1px),
-                linear-gradient(45deg, rgba(230, 230, 250, 0.8), rgba(221, 160, 221, 0.5));
-            background-size: 22px 22px, 17px 17px, 19px 19px, 25px 25px, 100% 100%;
-        }
-
-        .pattern-5 {
-            background: 
-                radial-gradient(circle at 35% 40%, #9400d3 2px, transparent 2px),
-                radial-gradient(circle at 70% 25%, #ba55d3 1px, transparent 1px),
-                radial-gradient(circle at 50% 75%, #8a2be2 1.5px, transparent 1.5px),
-                radial-gradient(circle at 20% 80%, #dda0dd 1px, transparent 1px),
-                radial-gradient(circle at 85% 60%, #da70d6 2px, transparent 2px),
-                linear-gradient(135deg, rgba(221, 160, 221, 0.6), rgba(218, 112, 214, 0.5));
-            background-size: 16px 16px, 23px 23px, 21px 21px, 19px 19px, 24px 24px, 100% 100%;
-        }
-
-        .image-embed-instructions {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 0;
+            .tab-content {
+                display: block !important;
+            }
         }
     </style>
 </head>
@@ -684,7 +520,7 @@
 
         <div class="grid">
             <div class="card">
-                <h3>🎯 Final Results</h3>
+                <h3>Final Results</h3>
                 <div class="metric-grid">
                     <div class="metric-card">
                         <div class="metric-value">94.1%</div>
@@ -697,16 +533,15 @@
                 </div>
                 
                 <div style="margin: 20px 0;">
-                    <h4>Target vs Achieved:</h4>
+                    <h4>Model Performance:</h4>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width: 93.3%;">93.3% (Target: 80%)</div>
+                        <div class="progress-fill" style="width: 93.3%;">93.3% Accuracy Achieved</div>
                     </div>
                 </div>
                 
-                <p style="color: #27ae60; font-weight: 600;">✅ Exceeded target by 13.3 percentage points!</p>
+                <p style="color: #27ae60; font-weight: 600;">Excellent performance in automated cancer detection!</p>
             </div>
 
-        <div class="grid">
             <div class="card">
                 <h3>📊 Project Overview</h3>
                 <p><strong>Objective:</strong> Develop a CNN model for automated classification of histopathological images into 5 distinct classes.</p>
@@ -724,10 +559,12 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="grid">
             <div class="card">
                 <h3>🔬 Sample Dataset Images</h3>
-                <p style="margin-bottom: 20px;"><strong>Colon Cancer Histopathological Images (768×768 pixels)</strong></p>
+                <p style="margin-bottom: 20px;"><strong>Lung and Colon Cancer Histopathological Images from Kaggle (768×768 pixels)</strong></p>
                 <div class="sample-images-grid">
                     <div class="sample-image-container">
                         <img src="https://github.com/mohamedsillahkanu/colon-cancer/raw/c6a727f0163415908d4c59351f216f332de75c99/colon673.png" alt="colonca637" class="embedded-image">
@@ -751,7 +588,7 @@
                     </div>
                 </div>
                 <p style="margin-top: 15px; font-style: italic; color: #7f8c8d;">
-                    These samples represent the complexity and variety in histopathological tissue analysis that the CNN model learns to classify.
+                    Sample images from the Kaggle dataset representing the complexity and variety in histopathological tissue analysis that the CNN model learns to classify.
                 </p>
             </div>
         </div>
@@ -772,7 +609,7 @@
                     <li>Original size: 768×768 pixels</li>
                     <li>Processed size: 150×150 pixels</li>
                     <li>Format: JPEG</li>
-                    <li>Source: HIPAA compliant & validated</li>
+                    <li>Source: Kaggle - Lung and Colon Cancer Histopathological Images</li>
                 </ul>
             </div>
 
@@ -1055,8 +892,8 @@ model = Sequential([
                 },
                 elements: {
                     point: {
-                        radius: 6,
-                        hoverRadius: 8
+                        radius: 4,
+                        hoverRadius: 6
                     }
                 }
             }
@@ -1107,167 +944,42 @@ model = Sequential([
             });
         });
 
+        // Make chart responsive to window resize
+        window.addEventListener('resize', function() {
+            accuracyChart.resize();
+        });
 
+        // Add touch support for mobile devices
+        let touchStartX = 0;
+        let touchEndX = 0;
 
-        // Function to expand actual images in a modal-like view
-        function expandImageSrc(imageSrc, filename) {
-            // Create modal overlay
-            const modal = document.createElement('div');
-            modal.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.9);
-                z-index: 1000;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-            `;
+        document.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const swipeDistance = touchEndX - touchStartX;
             
-            // Create expanded image
-            const expandedImg = document.createElement('img');
-            expandedImg.src = imageSrc;
-            expandedImg.style.cssText = `
-                max-width: 90%;
-                max-height: 90%;
-                border-radius: 15px;
-                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-                object-fit: contain;
-            `;
-            
-            // Create filename label
-            const filenameLabel = document.createElement('div');
-            filenameLabel.textContent = filename;
-            filenameLabel.style.cssText = `
-                position: absolute;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(255, 255, 255, 0.95);
-                padding: 12px 24px;
-                border-radius: 25px;
-                font-weight: 600;
-                color: #333;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            `;
-            
-            // Create close instruction
-            const closeInstruction = document.createElement('div');
-            closeInstruction.textContent = 'Click anywhere to close';
-            closeInstruction.style.cssText = `
-                position: absolute;
-                top: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(255, 255, 255, 0.9);
-                padding: 8px 16px;
-                border-radius: 20px;
-                font-size: 0.9rem;
-                color: #666;
-            `;
-            
-            modal.appendChild(expandedImg);
-            modal.appendChild(filenameLabel);
-            modal.appendChild(closeInstruction);
-            document.body.appendChild(modal);
-            
-            // Close modal on click
-            modal.onclick = function() {
-                document.body.removeChild(modal);
-            };
+            if (Math.abs(swipeDistance) > swipeThreshold) {
+                const tabButtons = document.querySelectorAll('.tab-button');
+                const activeButton = document.querySelector('.tab-button.active');
+                const activeIndex = Array.from(tabButtons).indexOf(activeButton);
+                
+                if (swipeDistance > 0 && activeIndex > 0) {
+                    // Swipe right - previous tab
+                    tabButtons[activeIndex - 1].click();
+                } else if (swipeDistance < 0 && activeIndex < tabButtons.length - 1) {
+                    // Swipe left - next tab
+                    tabButtons[activeIndex + 1].click();
+                }
+            }
         }
-
-        // Function to expand images in a modal-like view
-        function expandImage(imageId, filename) {
-            const sourceElement = document.getElementById(imageId);
-            
-            // Create modal overlay
-            const modal = document.createElement('div');
-            modal.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.9);
-                z-index: 1000;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-            `;
-            
-            // Create expanded image container
-            const expandedContainer = document.createElement('div');
-            expandedContainer.style.cssText = `
-                width: 80%;
-                max-width: 600px;
-                height: 80%;
-                max-height: 600px;
-                border-radius: 15px;
-                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-                overflow: hidden;
-                position: relative;
-            `;
-            
-            // Copy the pattern from the original image
-            const patternDiv = sourceElement.querySelector('.tissue-pattern');
-            const expandedPattern = patternDiv.cloneNode(true);
-            expandedPattern.style.cssText = `
-                width: 100%;
-                height: 100%;
-                transform: scale(1);
-                border-radius: 15px;
-            `;
-            
-            expandedContainer.appendChild(expandedPattern);
-            
-            // Create filename label
-            const filenameLabel = document.createElement('div');
-            filenameLabel.textContent = filename;
-            filenameLabel.style.cssText = `
-                position: absolute;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(255, 255, 255, 0.95);
-                padding: 12px 24px;
-                border-radius: 25px;
-                font-weight: 600;
-                color: #333;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            `;
-            
-            // Create close instruction
-            const closeInstruction = document.createElement('div');
-            closeInstruction.textContent = 'Click anywhere to close';
-            closeInstruction.style.cssText = `
-                position: absolute;
-                top: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(255, 255, 255, 0.9);
-                padding: 8px 16px;
-                border-radius: 20px;
-                font-size: 0.9rem;
-                color: #666;
-            `;
-            
-            modal.appendChild(expandedContainer);
-            modal.appendChild(filenameLabel);
-            modal.appendChild(closeInstruction);
-            document.body.appendChild(modal);
-            
-            // Close modal on click
-            modal.onclick = function() {
-                document.body.removeChild(modal);
-            };
-        }
-
-
     </script>
 </body>
 </html>
