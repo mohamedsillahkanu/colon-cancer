@@ -543,7 +543,7 @@
             </div>
 
             <div class="card">
-                <h3>📊 Project Overview</h3>
+                <h3>Project Overview</h3>
                 <p><strong>Objective:</strong> Develop a CNN model for automated classification of histopathological images into 5 distinct classes.</p>
                 <br>
                 <p><strong>Application:</strong> Healthcare automation for disease diagnosis including lung and colon tissue analysis.</p>
@@ -563,8 +563,16 @@
 
         <div class="grid">
             <div class="card">
-                <h3>🔬 Sample Dataset Images</h3>
+                <h3>Sample Dataset Images</h3>
                 <p style="margin-bottom: 20px;"><strong>Lung and Colon Cancer Histopathological Images from Kaggle (768×768 pixels)</strong></p>
+                <p style="margin-bottom: 15px;">
+                    <strong>Dataset Source:</strong> 
+                    <a href="https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images" 
+                       target="_blank" 
+                       style="color: #3498db; text-decoration: none; font-weight: 600;">
+                        Lung and Colon Cancer Histopathological Images - Kaggle
+                    </a>
+                </p>
                 <div class="sample-images-grid">
                     <div class="sample-image-container">
                         <img src="https://github.com/mohamedsillahkanu/colon-cancer/raw/c6a727f0163415908d4c59351f216f332de75c99/colon673.png" alt="colonca637" class="embedded-image">
@@ -595,7 +603,7 @@
 
         <div class="grid-3">
             <div class="card">
-                <h3>🔬 Dataset Composition</h3>
+                <h3>Dataset Composition</h3>
                 <div class="class-grid">
                     <div class="class-item">Lung Benign<br><strong>5,000 images</strong></div>
                     <div class="class-item">Lung Adenocarcinoma<br><strong>5,000 images</strong></div>
@@ -609,12 +617,12 @@
                     <li>Original size: 768×768 pixels</li>
                     <li>Processed size: 150×150 pixels</li>
                     <li>Format: JPEG</li>
-                    <li>Source: Kaggle - Lung and Colon Cancer Histopathological Images</li>
+                    <li>Source: <a href="https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images" target="_blank" style="color: #3498db; text-decoration: none;">Kaggle - Lung and Colon Cancer Histopathological Images</a></li>
                 </ul>
             </div>
 
             <div class="card">
-                <h3>🏗️ Model Architecture</h3>
+                <h3>Model Architecture</h3>
                 <div class="architecture-layer">
                     <span class="layer-type">Conv2D</span>
                     <span class="layer-params">32 filters, 3×3, ReLU</span>
@@ -658,10 +666,10 @@
             </div>
 
             <div class="card">
-                <h3>⚙️ Training Configuration</h3>
+                <h3>Training Configuration</h3>
                 <div class="methodology-step">
                     <span class="step-number">1</span>
-                    <strong>Data Split:</strong> 80% Training, 20% Testing
+                    <strong>Data Split:</strong> 80% Training, 20% Testing with Keras validation_split for monitoring
                 </div>
                 <div class="methodology-step">
                     <span class="step-number">2</span>
@@ -687,7 +695,7 @@
         </div>
 
         <div class="card">
-            <h3>📈 Training Performance Analysis</h3>
+            <h3>Training Performance Analysis</h3>
             <div class="tab-container">
                 <div class="tab-buttons">
                     <button class="tab-button active" onclick="showTab('performance-chart')">Performance Chart</button>
@@ -752,6 +760,10 @@
                 <div id="insights" class="tab-content">
                     <div class="methodology-step">
                         <span class="step-number">✓</span>
+                        <strong>Data Validation:</strong> Used Keras validation_split during training to monitor performance and prevent overfitting.
+                    </div>
+                    <div class="methodology-step">
+                        <span class="step-number">✓</span>
                         <strong>Initial Underfitting:</strong> Model started with 55.96% training accuracy but 84.70% validation accuracy, indicating initial underfitting.
                     </div>
                     <div class="methodology-step">
@@ -776,7 +788,7 @@
 
         <div class="grid">
             <div class="card">
-                <h3>🔧 Implementation Methodology</h3>
+                <h3>Implementation Methodology</h3>
                 <div class="methodology-step">
                     <span class="step-number">1</span>
                     <strong>Data Collection:</strong> Gathered 25,000 histopathological images across 5 classes with organized folder structure.
@@ -795,7 +807,7 @@
                 </div>
                 <div class="methodology-step">
                     <span class="step-number">5</span>
-                    <strong>Training:</strong> Used 80/20 train-test split with categorical crossentropy loss and Adam optimizer.
+                    <strong>Training:</strong> Used 80/20 train-test split with Keras validation_split during training, categorical crossentropy loss and Adam optimizer.
                 </div>
                 <div class="methodology-step">
                     <span class="step-number">6</span>
@@ -804,7 +816,7 @@
             </div>
 
             <div class="card">
-                <h3>💻 Code Implementation</h3>
+                <h3>Code Implementation</h3>
                 <p><strong>Key Libraries Used:</strong></p>
                 <div class="code-preview">
 <span class="keyword">import</span> numpy <span class="keyword">as</span> np
